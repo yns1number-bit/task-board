@@ -2,15 +2,24 @@
 
 タスク管理ボードのWebアプリケーション。
 
+## デプロイ先
+
+https://yns1number-bit.github.io/task-board/
+
+`main` ブランチへのプッシュで GitHub Actions が自動デプロイする。
+
 ## プロジェクト概要
 
-React / Next.js 等を使ったタスクボードアプリ。
+React + Vite で構築したシンプルなタスクボードアプリ。タスクの追加・完了・削除ができ、localStorage でデータを永続化する。
 
 ## 技術スタック
 
-- フレームワーク: (セットアップ時に記入)
-- パッケージマネージャ: (セットアップ時に記入)
-- スタイリング: (セットアップ時に記入)
+- フレームワーク: React 18
+- ビルドツール: Vite 6
+- パッケージマネージャ: npm
+- スタイリング: CSS Modules なし（グローバル CSS: `App.css` / `index.css`）
+- データ永続化: localStorage
+- デプロイ: GitHub Pages（GitHub Actions 経由）
 
 ## 開発コマンド
 
@@ -91,6 +100,13 @@ type 一覧:
 - コメントは「なぜ」が非自明な箇所のみ書く（「何をしているか」は書かない）
 - 型は可能な限り明示する
 - 1 PR = 1 目的（複数の変更を混ぜない）
+
+## コンポーネント命名規約
+
+- コンポーネントファイル名・関数名ともに **PascalCase**（例: `TaskItem.jsx`, `export default function TaskItem`）
+- カスタムフックは **`use` プレフィックス + camelCase**（例: `useTasks.js`）
+- イベントハンドラは **`handle` プレフィックス + camelCase**（例: `handleKeyDown`, `handleAddTask`）
+- CSS クラス名は **kebab-case**（例: `.task-list`, `.input-row`）
 
 ## ディレクトリ構成
 
