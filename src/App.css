@@ -1,0 +1,112 @@
+.container {
+  max-width: 560px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-row input:focus {
+  border-color: #4f86f7;
+}
+
+.input-row button {
+  padding: 10px 20px;
+  background: #4f86f7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.input-row button:hover {
+  background: #3a6fd8;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.task-list li:hover {
+  background: #fafafa;
+}
+
+.task-list li.done {
+  color: #aaa;
+  background: #f8f8f8;
+}
+
+.task-list li.done span {
+  text-decoration: line-through;
+}
+
+.task-list li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4f86f7;
+}
+
+.task-list li span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.task-list li .delete {
+  padding: 4px 10px;
+  background: none;
+  color: #ccc;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.task-list li .delete:hover {
+  color: #e55;
+  border-color: #e55;
+}
+
+.empty {
+  color: #bbb;
+  text-align: center;
+  padding: 24px 0;
+}
